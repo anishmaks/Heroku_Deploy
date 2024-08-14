@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Classification</title>
+</head>
+<body>
+    <h1>Ship Classification</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Classify">
+    </form>
+
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 300px;">
+    {% endif %}
+</body>
+</html>
+
+
