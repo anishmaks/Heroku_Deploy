@@ -2,3 +2,20 @@ Flask==2.0.2
 torch==1.9.0
 torchvision==0.10.0
 Pillow==8.3.1
+dvc
+numpy
+matplotlib
+pandas
+notebook
+pyYAML
+python-box==6.0.2
+joblib
+Flask-Cors
+ensure=1.0.2
+tqdm
+types-pyYAML
+scipy
+Flask-Cors
+
+-e .
+
