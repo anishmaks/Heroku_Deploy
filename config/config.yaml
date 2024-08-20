@@ -1,0 +1,10 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/anishmaks/SHIP_Classification_using_Resnet/raw/main/Images.zip
+  local_data_file: Images.zip
+  unzip_dir: extracted_data
+
+
