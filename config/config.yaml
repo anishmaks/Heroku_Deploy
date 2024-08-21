@@ -1,10 +1,18 @@
 artifacts_root: artifacts
 
 
+
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_URL: https://github.com/anishmaks/SHIP_Classification_using_Resnet/raw/main/Images.zip
-  local_data_file: Images.zip
-  unzip_dir: extracted_data
+  local_data_file: artifacts/data_ingestion/Images.zip
+  unzip_dir: artifacts/data_ingestion/extracted_data
+  class_dirs: 
+    - artifacts/data_ingestion/extracted_data/Carrier
+    - artifacts/data_ingestion/extracted_data/Cruise
+    - artifacts/data_ingestion/extracted_data/Cargo
+    - artifacts/data_ingestion/extracted_data/Military
+    - artifacts/data_ingestion/extracted_data/Tanker
+
 
 

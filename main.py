@@ -1,22 +1,22 @@
-from flask import Flask,request,render_template
-from predict import predict
+from Ship_Classifier import logger
+from Ship_Classifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+import sys
+import os
+
+# Add the src directory to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
 
+STAGE_NAME = "Data Ingestion stage"
 
-app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
-def index():
-    if request.method=='POST':
-        file=request.files.get('image')
-        if file:
-            image_path=f"static/{file.filename}"
-            file.save(image_path)
-            prediction=predict(image_path)
-            return render_template('index.html', prediction=prediction, image_path=image_path)
-        else:
-            return render_template('index.html', prediction=None, error="No file uploaded")
-    return render_template('index.html')
+if __name__=='__main__':
 
-if __name__ == '__main__':
-    app.run(debug=False)        
+ try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+   data_ingestion = DataIngestionTrainingPipeline()
+   data_ingestion.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+ except Exception as e:
+        logger.exception(e)
+        raise e

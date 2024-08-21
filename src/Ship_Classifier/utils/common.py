@@ -2,21 +2,22 @@ from PIL import Image
 from torchvision import transforms
 
 import os
-from box.exceptions import BoxValueError
+from box.exceptions import BoxError
 import yaml
 from Ship_Classifier import logger
 import json
 import joblib
 from ensure import ensure_annotations
-from box import ConfigBox
+from box import ConfigBox,BoxError
 from pathlib import Path
 from typing import Any
 import base64
+import logging
 
-
+logger = logging.getLogger(__name__)
 
 @ensure_annotations
-def read_yaml(path_to_yaml: Path) -> ConfigBox:
+def read_yaml(path_to_yaml) -> ConfigBox:
     """reads yaml file and returns
 
     Args:
@@ -30,11 +31,14 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         ConfigBox: ConfigBox type
     """
     try:
-        with open(path_to_yaml) as yaml_file:
+        with open(path_to_yaml,'r') as yaml_file:
             content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
+            if not isinstance(content, dict):
+                raise ValueError("YAML file content is not a dictionary")
+            
             return ConfigBox(content)
-    except BoxValueError:
+    except BoxError:
         raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
