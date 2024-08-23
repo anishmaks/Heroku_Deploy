@@ -16,6 +16,6 @@ tqdm
 types-pyYAML
 scipy
 Flask-Cors
-
+tensorboard
 -e .
 

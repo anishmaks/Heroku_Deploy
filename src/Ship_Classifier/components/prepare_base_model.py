@@ -10,6 +10,7 @@ from pathlib import Path
 
 from Ship_Classifier.entity.config_entity import PrepareBaseModelConfig
 
+
 class PrepareBaseModel:
   def __init__(self, config: PrepareBaseModelConfig):
         self.config = config
@@ -52,7 +53,7 @@ class PrepareBaseModel:
     if loss_fn is None:
      loss_fn = nn.CrossEntropyLoss()
      
-    #Predictions
+     #Predictions
     def predict(input_tensor):
             with torch.no_grad():  # No need to track gradients for predictions
                 model.eval()  # Set the model to evaluation mode
@@ -60,13 +61,51 @@ class PrepareBaseModel:
                 predictions = torch.argmax(output, dim=1)
             return predictions
     
-    print(f"Updated Model prepared with classes={classes}, freeze_all={freeze_all}, freeze_till={freeze_till}, learning_rate={learning_rate}")
+    print(f"Model prepared with classes={classes}, freeze_all={freeze_all}, freeze_till={freeze_till}, learning_rate={learning_rate}")
     # Summary
     print(model)
     
-    return model, optimizer, loss_fn, predict
-         
+    #Evaluation
+    def evaluate_model(self, dataloader, device):
+        self.model.eval()
+        correct = 0
+        total = 0
+        all_pred = []
+        all_labels = []
 
+        with torch.no_grad():
+            for images, labels in dataloader:
+                images, labels = images.to(device), labels.to(device)
+                outputs = self.model(images)
+                _, predicted = torch.max(outputs.data, 1)
+                total += labels.size(0)
+                correct += (predicted == labels).sum().item()
+
+                all_pred.extend(predicted.cpu().numpy())
+                all_labels.extend(labels.cpu().numpy())
+
+        accuracy = 100 * correct / total
+        print(f'Accuracy: {accuracy}%')
+
+        # Here you can add more metrics like precision, recall, F1-score
+        # For example, you could use sklearn.metrics for more advanced metrics:
+        # from sklearn.metrics import classification_report
+        # print(classification_report(all_labels, all_pred))
+
+        return accuracy  
+
+
+    
+    return model, optimizer, loss_fn, predict,evaluate_model
+         
+  def get_model(self):
+        return self.model
+
+  def get_optimizer(self):
+        return self.optimizer
+
+  def get_loss(self):
+        return self.loss_fn
        
     
   @staticmethod
@@ -80,7 +119,7 @@ class PrepareBaseModel:
           
         
   def update_base_model(self, freeze_all=True, freeze_till=None):
-         self.full_model,self.optimizer,self.loss_fn ,self.predict_fn =   self._prepare_full_model (
+         self.full_model,self.optimizer,self.loss_fn ,self.predict ,self.evaluate_model =   self._prepare_full_model (
             model=self.model,
             classes=self.config.params_classes,
             freeze_all=freeze_all,
@@ -88,12 +127,21 @@ class PrepareBaseModel:
             optimizer=self.optimizer,
             loss_fn=self.loss_fn,
             learning_rate=self.config.params_learning_rate)
+         
+         #def get_model(self):
+         #  return self.model
+
+         #def get_optimizer(self):
+         # return self.optimizer
+
+         #def get_loss(self):
+         # return self.loss_fn
         
         # print(f"Model prepared with classes={self._prepare_full_model.classes}, freeze_all={self._prepare_full_model.freeze_all}, freeze_till={self._prepare_full_model.freeze_till}, learning_rate={self._prepare_full_model.learning_rate}")
     # Summary
          print("Full Model :",self.full_model) 
          self.save_model(path=self.config.updated_base_model_path, model=self.full_model)
-
+         
   def load_model(self, path: Path):
 
       #   Load the model from the specified path.
