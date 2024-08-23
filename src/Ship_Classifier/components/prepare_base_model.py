@@ -128,6 +128,8 @@ class PrepareBaseModel:
             loss_fn=self.loss_fn,
             learning_rate=self.config.params_learning_rate)
          
+         return self.full_model,self.optimizer,self.loss_fn ,self.predict ,self.evaluate_model
+         
          #def get_model(self):
          #  return self.model
 
