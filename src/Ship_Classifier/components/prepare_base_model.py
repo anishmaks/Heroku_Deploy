@@ -148,5 +148,5 @@ class PrepareBaseModel:
 
       #   Load the model from the specified path.
       
-        self.full_model.load_state_dict(torch.load(path))
+        self.full_model.load_state_dict(torch.load(path), weights_only=True)
         print(f"Model loaded from {path}")

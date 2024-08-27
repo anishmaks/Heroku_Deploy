@@ -1,6 +1,6 @@
 from Ship_Classifier.constants import *
 from Ship_Classifier.utils.common  import read_yaml,create_directories
-from Ship_Classifier.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,PrepareCallbacksConfig,TrainingConfig
+from Ship_Classifier.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,PrepareCallbacksConfig,TrainingConfig,EvaluationConfig
 import os
 from pathlib import Path
 
@@ -13,6 +13,8 @@ class ConfigurationManager:
          # Print the paths to check if they are correct
         print(f"CONFIG_FILE_PATH: {config_filepath}")
         print(f"PARAMS_FILE_PATH: {params_filepath}")
+        self.CLASS_NAMES=['Cargo', 'Cruise', 'Carrier', 'Military', 'Tanker']
+        create_directories([self.config.artifacts_root])
 
         # Check if the config file exists
         if not os.path.exists(config_filepath):
@@ -116,3 +118,18 @@ class ConfigurationManager:
         # Call this function in your training code
 
     )
+   
+        
+        
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+        path_of_model="artifacts/training/model.pth",  # Updated model path to PyTorch format
+        training_data="artifacts/data_ingestion/extracted_data/Images",  # Update path to your training images
+        all_params=self.params,
+        params_image_size=self.params.IMAGE_SIZE,
+        params_batch_size=self.params.BATCH_SIZE,
+        CLASS_NAMES=['Cargo', 'Cruise', 'Carrier', 'Military', 'Tanker'],  # Add class names
+        params_classes=self.params.CLASSES
+    )
+        return eval_config   
+    

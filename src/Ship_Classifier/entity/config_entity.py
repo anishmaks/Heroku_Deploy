@@ -57,3 +57,5 @@ class EvaluationConfig:
     all_params: dict
     params_image_size: list
     params_batch_size: int
+    params_classes: int
+    CLASS_NAMES:list

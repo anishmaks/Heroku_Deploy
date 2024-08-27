@@ -963,3 +963,234 @@ x==========x]
 [2024-08-27 12:33:34,721: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2024-08-27 13:39:09,034: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:39:09,043: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:39:09,047: INFO: common: created directory at: artifacts]
+[2024-08-27 13:40:33,859: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:40:33,866: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:40:33,869: INFO: common: created directory at: artifacts]
+[2024-08-27 13:54:09,129: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:54:09,136: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:54:09,141: INFO: common: created directory at: artifacts]
+[2024-08-27 13:54:46,141: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:54:46,148: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:54:46,150: INFO: common: created directory at: artifacts]
+[2024-08-27 13:54:58,722: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:54:58,727: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:54:58,731: INFO: common: created directory at: artifacts]
+[2024-08-27 13:55:40,882: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 13:55:40,887: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 13:55:40,890: INFO: common: created directory at: artifacts]
+[2024-08-27 16:57:48,262: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 16:57:48,268: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 16:57:48,272: INFO: common: created directory at: artifacts]
+[2024-08-27 17:06:15,832: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:06:15,836: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:06:15,842: INFO: common: created directory at: artifacts]
+[2024-08-27 17:09:15,297: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:09:15,302: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:09:15,306: INFO: common: created directory at: artifacts]
+[2024-08-27 17:13:26,338: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:13:26,342: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:13:26,343: INFO: common: created directory at: artifacts]
+[2024-08-27 17:25:11,336: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:25:11,339: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:25:11,340: INFO: common: created directory at: artifacts]
+[2024-08-27 17:25:40,196: INFO: common: json file saved at: scores.json]
+[2024-08-27 17:32:49,742: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:32:49,745: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:32:49,747: INFO: common: created directory at: artifacts]
+[2024-08-27 17:33:18,472: INFO: common: json file saved at: scores.json]
+[2024-08-27 17:43:14,386: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:43:14,389: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:43:14,391: INFO: common: created directory at: artifacts]
+[2024-08-27 17:45:04,409: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:45:04,413: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:45:04,414: INFO: common: created directory at: artifacts]
+[2024-08-27 17:48:21,416: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:48:21,428: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:48:21,430: INFO: common: created directory at: artifacts]
+[2024-08-27 17:57:44,782: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 17:57:44,785: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 17:57:44,786: INFO: common: created directory at: artifacts]
+[2024-08-27 18:00:00,773: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:00:00,776: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:00:00,777: INFO: common: created directory at: artifacts]
+[2024-08-27 18:04:03,861: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:04:03,864: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:04:03,866: INFO: common: created directory at: artifacts]
+[2024-08-27 18:06:39,690: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:06:39,693: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:06:39,694: INFO: common: created directory at: artifacts]
+[2024-08-27 18:10:45,459: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:10:45,461: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:10:45,462: INFO: common: created directory at: artifacts]
+[2024-08-27 18:11:43,219: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:11:43,221: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:11:43,225: INFO: common: created directory at: artifacts]
+[2024-08-27 18:39:09,762: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:39:09,764: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:39:09,766: INFO: common: created directory at: artifacts]
+[2024-08-27 18:42:58,259: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:42:58,262: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:42:58,264: INFO: common: created directory at: artifacts]
+[2024-08-27 18:45:46,005: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:45:46,011: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:45:46,015: INFO: common: created directory at: artifacts]
+[2024-08-27 18:46:34,756: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:46:34,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:46:34,765: INFO: common: created directory at: artifacts]
+[2024-08-27 18:48:55,503: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:48:55,510: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:48:55,513: INFO: common: created directory at: artifacts]
+[2024-08-27 18:49:57,185: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:49:57,191: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:49:57,194: INFO: common: created directory at: artifacts]
+[2024-08-27 18:54:51,488: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 18:54:51,493: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 18:54:51,496: INFO: common: created directory at: artifacts]
+[2024-08-27 19:02:19,037: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:02:19,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:02:19,046: INFO: common: created directory at: artifacts]
+[2024-08-27 19:04:32,150: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:04:32,157: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:04:32,161: INFO: common: created directory at: artifacts]
+[2024-08-27 19:05:11,471: INFO: common: json file saved at: scores.json]
+[2024-08-27 19:17:54,220: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:17:54,224: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:17:54,226: INFO: common: created directory at: artifacts]
+[2024-08-27 19:18:34,825: INFO: common: json file saved at: scores.json]
+[2024-08-27 19:46:15,104: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 19:46:15,105: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 19:46:15,209: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:15,212: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:15,214: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:15,220: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:15,222: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:15,223: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:15,224: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 19:46:15,225: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 19:46:15,226: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 19:46:15,227: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 19:46:15,228: INFO: data_ingestion: File already exists with size: 4775636]
+[2024-08-27 19:46:15,228: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 19:46:15,809: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 19:46:15,811: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 19:46:15,812: INFO: main: *******************]
+[2024-08-27 19:46:15,812: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 19:46:15,812: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 19:46:15,817: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:15,822: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:15,824: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:15,830: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:15,833: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:15,834: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:15,835: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 19:46:16,288: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 19:46:16,289: INFO: main: *******************]
+[2024-08-27 19:46:16,290: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 19:46:16,296: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:16,299: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:16,300: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:16,307: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:46:16,311: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:46:16,312: INFO: common: created directory at: artifacts]
+[2024-08-27 19:46:16,313: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 19:46:16,573: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 19:46:16,575: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 19:46:16,646: INFO: common: created directory at: artifacts\training]
+[2024-08-27 19:47:20,479: ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\extracted_data\\Images\\Military\\2812776.jpg']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 60, in main
+    training.train(callback_list=callback_list)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 80, in train
+    for inputs, labels in self.train_loader:
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torch\utils\data\dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 245, in __getitem__
+    sample = self.loader(path)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 284, in default_loader
+    return pil_loader(path)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 262, in pil_loader
+    with open(path, "rb") as f:
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\extracted_data\\Images\\Military\\2812776.jpg'
+[2024-08-27 19:48:00,983: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 19:48:00,983: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 19:48:01,094: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:48:01,098: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:48:01,099: INFO: common: created directory at: artifacts]
+[2024-08-27 19:48:01,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:48:01,111: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:48:01,112: INFO: common: created directory at: artifacts]
+[2024-08-27 19:48:01,113: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 19:48:01,114: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 19:48:01,114: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 19:48:01,115: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 19:48:59,282: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 19:48:59,288: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 19:49:05,679: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 19:49:05,682: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 19:49:05,683: INFO: main: *******************]
+[2024-08-27 19:49:05,684: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 19:49:05,684: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 19:49:05,690: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:49:05,694: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:49:05,695: INFO: common: created directory at: artifacts]
+[2024-08-27 19:49:05,701: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:49:05,704: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:49:05,705: INFO: common: created directory at: artifacts]
+[2024-08-27 19:49:05,705: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 19:49:06,144: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 19:49:06,145: INFO: main: *******************]
+[2024-08-27 19:49:06,145: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 19:49:06,150: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:49:06,153: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:49:06,155: INFO: common: created directory at: artifacts]
+[2024-08-27 19:49:06,160: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 19:49:06,163: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 19:49:06,164: INFO: common: created directory at: artifacts]
+[2024-08-27 19:49:06,164: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 19:49:06,405: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 19:49:06,406: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 19:49:06,465: INFO: common: created directory at: artifacts\training]
+[2024-08-27 19:49:06,745: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
