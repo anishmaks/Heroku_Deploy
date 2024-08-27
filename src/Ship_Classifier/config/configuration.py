@@ -1,6 +1,6 @@
 from Ship_Classifier.constants import *
 from Ship_Classifier.utils.common  import read_yaml,create_directories
-from Ship_Classifier.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,PrepareCallbacksConfig
+from Ship_Classifier.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,PrepareCallbacksConfig,TrainingConfig
 import os
 from pathlib import Path
 
@@ -87,3 +87,32 @@ class ConfigurationManager:
         )
 
         return prepare_callback_config
+    
+    
+    def get_training_config(self) -> TrainingConfig:
+       training = self.config.training
+       prepare_base_model = self.config.prepare_base_model
+       params = self.params
+       
+       # Update the path to match the directory structure shown in the screenshot
+      # training_data = os.path.join(self.config.data_ingestion.unzip_dir, "extracted_data", "Images")
+       create_directories([
+         Path(training.root_dir)
+    ])
+
+       return TrainingConfig(
+        root_dir=Path(training.root_dir),
+        trained_model_path=Path(training.trained_model_path),  # This now points to the correct image folder structure
+        updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
+        training_data = Path(os.path.join(self.config.data_ingestion.unzip_dir,  "Images")),
+        batch_size=params.BATCH_SIZE,
+        num_epochs=params.epochs,
+        learning_rate=params.LEARNING_RATE,
+        params_is_augmentation=params.AUGMENTATION,
+        params_image_size=params.IMAGE_SIZE,
+        class_names=self.config.CLASS_NAMES 
+        #base_model_dir=prepare_base_model.model_dir,
+        #base_model_name=prepare_base_model.model_name,
+        # Call this function in your training code
+
+    )

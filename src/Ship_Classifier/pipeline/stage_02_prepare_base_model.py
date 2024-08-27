@@ -23,7 +23,7 @@ class PrepareBaseModelTrainingPipeline:
     prepare_base_model.save_model(model=prepare_base_model.full_model,path=prepare_base_model_config.updated_base_model_path)
     
     
-    if __name__ == '__main__':
+if __name__ == '__main__':
      try:
         logger.info(f"*******************")
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
