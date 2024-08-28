@@ -52,7 +52,7 @@ class ModelTrainingPipeline:
     # Prepare data loaders for training and validation
     training.train_valid_loader()
     
-    images_path = Path("artifacts/data_ingestion/extracted_data/Images")
+    images_path = Path("artifacts/data_ingestion/extracted_data")
     training.display_image_counts(images_path)
     
     

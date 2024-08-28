@@ -106,7 +106,7 @@ class ConfigurationManager:
         root_dir=Path(training.root_dir),
         trained_model_path=Path(training.trained_model_path),  # This now points to the correct image folder structure
         updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
-        training_data = Path(os.path.join(self.config.data_ingestion.unzip_dir,  "Images")),
+        training_data = Path(os.path.join(self.config.data_ingestion.unzip_dir)),
         batch_size=params.BATCH_SIZE,
         num_epochs=params.epochs,
         learning_rate=params.LEARNING_RATE,
@@ -124,7 +124,7 @@ class ConfigurationManager:
     def get_validation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
         path_of_model="artifacts/training/model.pth",  # Updated model path to PyTorch format
-        training_data="artifacts/data_ingestion/extracted_data/Images",  # Update path to your training images
+        training_data="artifacts/data_ingestion/extracted_data",  # Update path to your training images
         all_params=self.params,
         params_image_size=self.params.IMAGE_SIZE,
         params_batch_size=self.params.BATCH_SIZE,

@@ -1194,3 +1194,830 @@ Traceback (most recent call last):
     classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
                                              ^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 21:37:55,783: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 21:37:55,784: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 21:37:55,874: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:37:55,884: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:37:55,886: INFO: common: created directory at: artifacts]
+[2024-08-27 21:37:55,889: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:37:55,891: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:37:55,892: INFO: common: created directory at: artifacts]
+[2024-08-27 21:37:55,893: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 21:37:55,893: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 21:37:55,894: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 21:37:55,894: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 21:38:08,493: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 21:38:08,497: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 21:38:12,715: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 21:38:12,716: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 21:38:12,717: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 21:38:12,717: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 21:38:12,718: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 21:38:12,718: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 21:38:12,720: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 21:38:12,721: INFO: main: *******************]
+[2024-08-27 21:38:12,721: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 21:38:12,721: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 21:38:12,725: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:38:12,729: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:38:12,730: INFO: common: created directory at: artifacts]
+[2024-08-27 21:38:12,733: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:38:12,735: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:38:12,736: INFO: common: created directory at: artifacts]
+[2024-08-27 21:38:12,737: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 21:38:13,123: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 21:38:13,124: INFO: main: *******************]
+[2024-08-27 21:38:13,124: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 21:38:13,128: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:38:13,131: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:38:13,132: INFO: common: created directory at: artifacts]
+[2024-08-27 21:38:13,136: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 21:38:13,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 21:38:13,139: INFO: common: created directory at: artifacts]
+[2024-08-27 21:38:13,140: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 21:38:13,312: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 21:38:13,313: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 21:38:13,360: INFO: common: created directory at: artifacts\training]
+[2024-08-27 21:38:13,586: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 22:17:10,365: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:17:10,365: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:17:10,471: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:10,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:10,475: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:10,481: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:10,485: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:10,487: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:10,488: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:17:10,489: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:17:10,489: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:17:10,489: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:17:10,491: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 22:17:10,491: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:17:15,787: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 22:17:15,787: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:17:15,788: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:17:15,788: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:17:15,789: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:17:15,789: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:17:15,791: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:17:15,792: INFO: main: *******************]
+[2024-08-27 22:17:15,792: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:17:15,792: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:17:15,797: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:15,799: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:15,800: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:15,804: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:15,806: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:15,807: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:15,807: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:17:16,201: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:17:16,203: INFO: main: *******************]
+[2024-08-27 22:17:16,204: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:17:16,209: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:16,211: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:16,212: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:16,216: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:17:16,219: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:17:16,220: INFO: common: created directory at: artifacts]
+[2024-08-27 22:17:16,221: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:17:16,450: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:17:16,451: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:17:16,507: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:17:16,750: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\extracted_data']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\extracted_data'
+[2024-08-27 22:18:43,259: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:18:43,260: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:18:43,364: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:43,368: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:43,371: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:43,376: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:43,380: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:43,381: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:43,381: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:18:43,382: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:18:43,382: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:18:43,383: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:18:43,384: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 22:18:43,385: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:18:48,169: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 22:18:48,170: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:18:48,171: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:18:48,172: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:18:48,173: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:18:48,173: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:18:48,176: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:18:48,177: INFO: main: *******************]
+[2024-08-27 22:18:48,177: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:18:48,177: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:18:48,182: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:48,184: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:48,185: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:48,191: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:48,194: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:48,195: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:48,196: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:18:48,588: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:18:48,589: INFO: main: *******************]
+[2024-08-27 22:18:48,590: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:18:48,594: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:48,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:48,599: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:48,603: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:18:48,606: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:18:48,607: INFO: common: created directory at: artifacts]
+[2024-08-27 22:18:48,607: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:18:48,821: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:18:48,822: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:18:48,923: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:18:49,229: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 56, in main
+    training.display_image_counts(images_path)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 61, in display_image_counts
+    classes = [entry for entry in path.iterdir() if entry.is_dir()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\pathlib.py", line 1056, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 22:30:20,030: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:30:20,031: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:30:20,145: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:20,149: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:20,151: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:20,162: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:20,166: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:20,167: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:20,167: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:30:20,169: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:30:20,169: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:30:20,170: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:30:41,250: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 22:30:41,256: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:30:47,735: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data/Images]
+[2024-08-27 22:30:47,735: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:30:47,737: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:30:47,738: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:30:47,738: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:30:47,739: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:30:47,742: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:30:47,743: INFO: main: *******************]
+[2024-08-27 22:30:47,744: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:30:47,744: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:30:47,750: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:47,754: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:47,756: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:47,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:47,766: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:47,767: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:47,768: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:30:48,250: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:30:48,251: INFO: main: *******************]
+[2024-08-27 22:30:48,251: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:30:48,256: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:48,259: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:48,261: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:48,267: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:30:48,270: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:30:48,271: INFO: common: created directory at: artifacts]
+[2024-08-27 22:30:48,272: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:30:48,566: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:30:48,567: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:30:48,638: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:30:48,959: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images'
+[2024-08-27 22:34:22,007: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:34:22,007: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:34:22,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:22,109: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:22,111: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:22,117: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:22,120: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:22,121: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:22,122: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:34:22,122: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:34:22,123: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:34:22,123: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:34:22,125: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 22:34:22,125: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:34:26,481: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data/Images]
+[2024-08-27 22:34:26,482: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:34:26,482: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:34:26,483: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:34:26,484: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:34:26,485: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:34:26,486: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:34:26,487: INFO: main: *******************]
+[2024-08-27 22:34:26,488: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:34:26,488: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:34:26,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:26,496: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:26,497: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:26,501: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:26,504: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:26,505: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:26,505: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:34:26,905: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:34:26,906: INFO: main: *******************]
+[2024-08-27 22:34:26,907: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:34:26,911: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:26,913: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:26,914: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:26,918: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:34:26,921: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:34:26,921: INFO: common: created directory at: artifacts]
+[2024-08-27 22:34:26,922: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:34:27,116: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:34:27,117: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:34:27,216: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:34:27,461: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images'
+[2024-08-27 22:35:45,299: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:35:45,300: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:35:45,401: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:45,405: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:45,406: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:45,412: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:45,415: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:45,416: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:45,417: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:35:45,418: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:35:45,418: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:35:45,418: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:35:45,419: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 22:35:45,420: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:35:51,734: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 22:35:51,735: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:35:51,736: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:35:51,736: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:35:51,737: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:35:51,737: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:35:51,739: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:35:51,739: INFO: main: *******************]
+[2024-08-27 22:35:51,740: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:35:51,740: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:35:51,745: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:51,749: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:51,751: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:51,754: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:51,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:51,758: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:51,758: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:35:52,180: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:35:52,181: INFO: main: *******************]
+[2024-08-27 22:35:52,182: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:35:52,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:52,189: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:52,191: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:52,196: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:35:52,199: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:35:52,199: INFO: common: created directory at: artifacts]
+[2024-08-27 22:35:52,200: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:35:52,409: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:35:52,410: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:35:52,504: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:42:45,492: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:42:45,492: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:42:45,597: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:42:45,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:42:45,628: INFO: common: created directory at: artifacts]
+[2024-08-27 22:42:45,634: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:42:45,636: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:42:45,638: INFO: common: created directory at: artifacts]
+[2024-08-27 22:42:45,639: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:42:45,640: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:42:45,640: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:42:45,641: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:43:13,353: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 22:43:13,358: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:43:19,757: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 22:43:19,758: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:43:19,760: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:43:19,761: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:43:19,762: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:43:19,763: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:43:19,766: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:43:19,767: INFO: main: *******************]
+[2024-08-27 22:43:19,767: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:43:19,768: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:43:19,775: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:43:19,779: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:43:19,781: INFO: common: created directory at: artifacts]
+[2024-08-27 22:43:19,788: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:43:19,793: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:43:19,795: INFO: common: created directory at: artifacts]
+[2024-08-27 22:43:19,797: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:43:20,254: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:43:20,255: INFO: main: *******************]
+[2024-08-27 22:43:20,255: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:43:20,262: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:43:20,266: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:43:20,267: INFO: common: created directory at: artifacts]
+[2024-08-27 22:43:20,273: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:43:20,277: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:43:20,278: INFO: common: created directory at: artifacts]
+[2024-08-27 22:43:20,279: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:43:20,577: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:43:20,578: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:43:20,642: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:43:20,943: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 22:45:22,284: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:45:22,285: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:45:22,386: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:45:22,390: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:45:22,394: INFO: common: created directory at: artifacts]
+[2024-08-27 22:45:22,400: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:45:22,403: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:45:22,403: INFO: common: created directory at: artifacts]
+[2024-08-27 22:45:22,404: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:45:22,404: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:45:22,406: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:45:22,406: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:46:25,373: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 22:46:25,378: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:46:31,874: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data/Images]
+[2024-08-27 22:46:31,909: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:46:31,910: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:46:31,911: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:46:31,912: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:46:31,914: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:46:31,915: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:46:31,916: INFO: main: *******************]
+[2024-08-27 22:46:31,916: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:46:31,917: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:46:31,924: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:46:31,927: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:46:31,928: INFO: common: created directory at: artifacts]
+[2024-08-27 22:46:31,934: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:46:31,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:46:31,939: INFO: common: created directory at: artifacts]
+[2024-08-27 22:46:31,940: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:46:32,446: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:46:32,447: INFO: main: *******************]
+[2024-08-27 22:46:32,447: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:46:32,455: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:46:32,458: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:46:32,460: INFO: common: created directory at: artifacts]
+[2024-08-27 22:46:32,467: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:46:32,469: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:46:32,470: INFO: common: created directory at: artifacts]
+[2024-08-27 22:46:32,471: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:46:32,795: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:46:32,796: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:46:32,860: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:46:33,191: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 53, in main
+    training.train_valid_loader()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 53, in train_valid_loader
+    train_dataset = datasets.ImageFolder(self.config.training_data, transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images\\Images'
+[2024-08-27 22:54:35,830: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:54:35,830: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:54:35,931: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:54:35,934: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:54:35,936: INFO: common: created directory at: artifacts]
+[2024-08-27 22:54:35,942: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:54:35,945: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:54:35,946: INFO: common: created directory at: artifacts]
+[2024-08-27 22:54:35,946: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:54:35,948: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:54:35,948: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:54:35,948: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 22:54:55,932: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 22:54:55,939: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 22:55:02,486: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 22:55:02,487: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 22:55:02,488: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 22:55:02,489: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 22:55:02,490: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 22:55:02,490: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 22:55:02,493: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 22:55:02,494: INFO: main: *******************]
+[2024-08-27 22:55:02,494: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 22:55:02,495: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 22:55:02,500: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:55:02,504: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:55:02,506: INFO: common: created directory at: artifacts]
+[2024-08-27 22:55:02,514: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:55:02,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:55:02,517: INFO: common: created directory at: artifacts]
+[2024-08-27 22:55:02,519: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:55:03,016: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 22:55:03,017: INFO: main: *******************]
+[2024-08-27 22:55:03,017: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 22:55:03,024: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:55:03,027: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:55:03,029: INFO: common: created directory at: artifacts]
+[2024-08-27 22:55:03,037: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:55:03,041: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:55:03,042: INFO: common: created directory at: artifacts]
+[2024-08-27 22:55:03,042: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 22:55:03,320: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 22:55:03,322: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 22:55:03,387: INFO: common: created directory at: artifacts\training]
+[2024-08-27 22:55:03,756: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 56, in main
+    training.display_image_counts(images_path)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 61, in display_image_counts
+    classes = [entry for entry in path.iterdir() if entry.is_dir()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\pathlib.py", line 1056, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 22:59:57,530: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 22:59:57,530: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 22:59:57,650: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:59:57,655: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:59:57,657: INFO: common: created directory at: artifacts]
+[2024-08-27 22:59:57,663: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:59:57,666: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:59:57,666: INFO: common: created directory at: artifacts]
+[2024-08-27 22:59:57,667: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 22:59:57,668: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:59:57,668: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 22:59:57,669: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 23:00:20,071: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 23:00:20,077: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 23:00:26,108: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 23:00:26,112: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 23:00:26,112: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 23:00:26,113: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 23:00:26,114: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 23:00:26,115: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 23:00:26,116: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 23:00:26,117: INFO: main: *******************]
+[2024-08-27 23:00:26,118: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 23:00:26,118: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 23:00:26,124: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:00:26,128: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:00:26,129: INFO: common: created directory at: artifacts]
+[2024-08-27 23:00:26,134: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:00:26,137: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:00:26,139: INFO: common: created directory at: artifacts]
+[2024-08-27 23:00:26,141: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:00:26,544: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 23:00:26,545: INFO: main: *******************]
+[2024-08-27 23:00:26,545: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 23:00:26,549: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:00:26,552: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:00:26,553: INFO: common: created directory at: artifacts]
+[2024-08-27 23:00:26,557: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:00:26,560: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:00:26,561: INFO: common: created directory at: artifacts]
+[2024-08-27 23:00:26,562: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:00:26,763: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:00:26,764: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:00:26,819: INFO: common: created directory at: artifacts\training]
+[2024-08-27 23:00:27,130: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 56, in main
+    training.display_image_counts(images_path)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 61, in display_image_counts
+    classes = [entry for entry in path.iterdir() if entry.is_dir()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\pathlib.py", line 1056, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 23:09:11,767: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 23:09:11,767: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 23:09:11,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:11,873: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:11,875: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:11,880: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:11,884: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:11,885: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:11,886: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 23:09:11,887: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 23:09:11,888: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 23:09:11,888: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 23:09:11,889: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 23:09:11,890: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 23:09:16,472: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 23:09:16,472: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 23:09:16,474: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 23:09:16,475: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 23:09:16,475: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 23:09:16,476: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 23:09:16,477: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 23:09:16,478: INFO: main: *******************]
+[2024-08-27 23:09:16,479: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 23:09:16,480: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 23:09:16,484: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:16,487: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:16,489: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:16,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:16,495: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:16,496: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:16,497: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:09:16,864: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 23:09:16,866: INFO: main: *******************]
+[2024-08-27 23:09:16,867: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 23:09:16,872: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:16,875: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:16,876: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:16,882: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:09:16,885: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:09:16,886: INFO: common: created directory at: artifacts]
+[2024-08-27 23:09:16,887: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:09:17,079: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:09:17,080: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:09:17,134: INFO: common: created directory at: artifacts\training]
+[2024-08-27 23:09:17,424: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "c:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 56, in main
+    training.display_image_counts(images_path)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 61, in display_image_counts
+    classes = [entry for entry in path.iterdir() if entry.is_dir()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\pathlib.py", line 1056, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 23:13:01,553: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 23:13:01,553: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 23:13:01,656: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:01,659: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:01,662: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:01,668: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:01,671: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:01,672: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:01,672: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 23:13:01,674: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 23:13:01,674: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 23:13:01,674: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 23:13:44,891: INFO: data_ingestion: artifacts/data_ingestion/Images.zip downloaded successfully!]
+[2024-08-27 23:13:44,897: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 23:13:51,637: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 23:13:51,638: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 23:13:51,639: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 23:13:51,640: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 23:13:51,641: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 23:13:51,641: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 23:13:51,645: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 23:13:51,646: INFO: main: *******************]
+[2024-08-27 23:13:51,646: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 23:13:51,647: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 23:13:51,654: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:51,656: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:51,658: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:51,664: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:51,669: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:51,670: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:51,671: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:13:52,138: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 23:13:52,139: INFO: main: *******************]
+[2024-08-27 23:13:52,139: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 23:13:52,147: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:52,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:52,152: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:52,158: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:13:52,162: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:13:52,163: INFO: common: created directory at: artifacts]
+[2024-08-27 23:13:52,164: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:13:52,474: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:13:52,477: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:13:52,548: INFO: common: created directory at: artifacts\training]
+[2024-08-27 23:13:52,919: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images']
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\main.py", line 53, in <module>
+    model_trainer.main()
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\pipeline\stage_03_training.py", line 56, in main
+    training.display_image_counts(images_path)
+  File "c:\users\sasu4\ship_classification_using_resnet\src\Ship_Classifier\components\training.py", line 61, in display_image_counts
+    classes = [entry for entry in path.iterdir() if entry.is_dir()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\pathlib.py", line 1056, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\extracted_data\\Images'
+[2024-08-27 23:21:03,882: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:21:03,894: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:21:03,896: INFO: common: created directory at: artifacts]
+[2024-08-27 23:21:04,279: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:21:04,281: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:21:04,379: INFO: common: created directory at: artifacts\training]
+[2024-08-27 23:23:44,836: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:23:44,842: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:23:44,846: INFO: common: created directory at: artifacts]
+[2024-08-27 23:23:45,143: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:23:45,145: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:23:45,268: INFO: common: created directory at: artifacts\training]
+[2024-08-27 23:26:08,780: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-27 23:26:08,780: INFO: stage_01_data_ingestion: Initializing ConfigurationManager]
+[2024-08-27 23:26:08,899: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:08,902: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:08,903: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:08,907: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:08,909: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:08,910: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:08,911: INFO: stage_01_data_ingestion: Retrieving data ingestion configuration]
+[2024-08-27 23:26:08,911: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 23:26:08,913: INFO: stage_01_data_ingestion: Initializing DataIngestion]
+[2024-08-27 23:26:08,913: INFO: stage_01_data_ingestion: Downloading file]
+[2024-08-27 23:26:08,913: INFO: data_ingestion: File already exists with size: 44792554]
+[2024-08-27 23:26:08,914: INFO: stage_01_data_ingestion: Extracting zip file]
+[2024-08-27 23:26:13,587: INFO: data_ingestion: Extraction completed successfully into artifacts/data_ingestion/extracted_data]
+[2024-08-27 23:26:13,587: INFO: data_ingestion: Folder 'Cargo' exists.]
+[2024-08-27 23:26:13,589: INFO: data_ingestion: Folder 'Carrier' exists.]
+[2024-08-27 23:26:13,592: INFO: data_ingestion: Folder 'Cruise' exists.]
+[2024-08-27 23:26:13,594: INFO: data_ingestion: Folder 'Tanker' exists.]
+[2024-08-27 23:26:13,595: INFO: data_ingestion: Folder 'Military' exists.]
+[2024-08-27 23:26:13,599: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-27 23:26:13,600: INFO: main: *******************]
+[2024-08-27 23:26:13,600: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-27 23:26:13,601: INFO: stage_02_prepare_base_model: Initializing ConfigurationManager]
+[2024-08-27 23:26:13,605: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:13,608: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:13,609: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:13,614: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:13,617: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:13,618: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:13,619: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:26:14,087: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-08-27 23:26:14,089: INFO: main: *******************]
+[2024-08-27 23:26:14,092: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-08-27 23:26:14,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:14,104: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:14,107: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:14,114: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 23:26:14,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 23:26:14,119: INFO: common: created directory at: artifacts]
+[2024-08-27 23:26:14,121: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-27 23:26:14,370: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-08-27 23:26:14,370: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-08-27 23:26:14,429: INFO: common: created directory at: artifacts\training]
