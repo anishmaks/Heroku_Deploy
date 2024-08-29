@@ -123,8 +123,8 @@ class ConfigurationManager:
         
     def get_validation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-        path_of_model="artifacts/training/model.pth",  # Updated model path to PyTorch format
-        training_data="artifacts/data_ingestion/extracted_data",  # Update path to your training images
+        path_of_model=Path("artifacts/training/model.pth"),  # Updated model path to PyTorch format
+        training_data=Path("artifacts/data_ingestion/extracted_data"),  # Update path to your training images
         all_params=self.params,
         params_image_size=self.params.IMAGE_SIZE,
         params_batch_size=self.params.BATCH_SIZE,
