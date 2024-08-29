@@ -36,7 +36,7 @@ stages:
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
-      - EPOCHS
+      - epochs
       - BATCH_SIZE
       - AUGMENTATION
     outs:
