@@ -147,3 +147,14 @@ def preprocess_image(image_path):
     image_tensor=image_tensor.unsqueeze(0)
     
     return image_tensor
+
+def decodeImage(image_string, fileName):
+    """
+    Decodes a base64 encoded image string and saves it to a file.
+
+    :param image_string: base64 string representing the image
+    :param fileName: the file name where the image should be saved
+    """
+    image_data = base64.b64decode(image_string)
+    with open(fileName, 'wb') as f:
+        f.write(image_data)

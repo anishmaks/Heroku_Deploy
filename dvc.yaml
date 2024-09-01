@@ -19,11 +19,9 @@ stages:
       - CLASSES
       - WEIGHTS
       - LEARNING_RATE
-      - CLASSES
-      - freeze_all
-      - freeze_till
     outs:
       - artifacts/prepare_base_model
+
 
 
   training:
@@ -36,11 +34,17 @@ stages:
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
-      - epochs
       - BATCH_SIZE
       - AUGMENTATION
+      - epochs
+      - CLASSES
+      - LEARNING_RATE
+      
     outs:
       - artifacts/training/model.pth
+
+
+  
 
   evaluation:
     cmd: python src/Ship_Classifier/pipeline/stage_04_evaluation.py

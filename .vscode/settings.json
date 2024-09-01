@@ -3,6 +3,7 @@
         "filedir",
         "ftrs",
         "optim",
+        "putenv",
         "tensorboard"
     ]
 }
