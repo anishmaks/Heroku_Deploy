@@ -2703,3 +2703,86 @@ AttributeError: 'PredictionPipeline' object has no attribute 'device'
 [2024-09-02 12:03:03,503: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 12:03:03] "POST /predict HTTP/1.1" 200 -]
 [2024-09-02 12:03:09,532: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 12:03:09] "POST /predict HTTP/1.1" 200 -]
 [2024-09-02 12:22:58,368: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 12:22:58] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 14:55:02,847: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 14:55:02] "GET / HTTP/1.1" 200 -]
+[2024-09-02 14:55:08,987: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 41, in predictRoute
+    file.save(filepath)
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'uploads\\fishing.jpg'
+[2024-09-02 14:55:09,024: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 14:55:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 14:55:14,719: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 41, in predictRoute
+    file.save(filepath)
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'uploads\\carrirer.jpg'
+[2024-09-02 14:55:14,729: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 14:55:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 14:55:16,366: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 41, in predictRoute
+    file.save(filepath)
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'uploads\\carrirer.jpg'
+[2024-09-02 14:55:16,372: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 14:55:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 14:55:18,264: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 14:55:18] "GET / HTTP/1.1" 200 -]
