@@ -1,52 +1,56 @@
 from flask import Flask, request, jsonify, render_template
-import os
 from flask_cors import CORS, cross_origin
-from torchvision import transforms
-from PIL import Image
-import torch
-import torch.nn as nn
-from src.Ship_Classifier.utils.common import decodeImage
+from werkzeug.utils import secure_filename
+import os
+import base64
 from src.Ship_Classifier.pipeline.predict import PredictionPipeline
-from werkzeug.urls import quote as url_quote
-from werkzeug.urls import unquote 
-
-
-
-os.putenv('LANG', 'en_US.UTF-8')
-os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
 CORS(app)
 
-
+# Initialize the ClientApp
 class ClientApp:
     def __init__(self):
-        self.filename = "inputImage.jpg"
-        self.classifier = PredictionPipeline(self.filename)
+        self.filename = "inputImage.jpg"  # Default filename
+        self.classifier = None
 
+clApp = ClientApp()
 
 @app.route("/", methods=['GET'])
 @cross_origin()
 def home():
     return render_template('index.html')
 
-
-@app.route("/train", methods=['GET','POST'])
-@cross_origin()
-def trainRoute():
-    os.system("python main.py")
-    return "Training done successfully!"
-
-
 @app.route("/predict", methods=['POST'])
 @cross_origin()
 def predictRoute():
-    image = request.json['image']
-    decodeImage(image, clApp.filename)
-    result = clApp.classifier.predict()
-    return jsonify(result)
+    # Check if an image was uploaded
+    if 'file' not in request.files:
+        return jsonify({"error": "No file part"})
+    
+    file = request.files['file']
+    
+    # If the user does not select a file, the browser may also submit an empty part without a filename
+    if file.filename == '':
+        return jsonify({"error": "No selected file"})
 
+    if file:
+        # Secure the filename
+        filename = secure_filename(file.filename)
+        filepath = os.path.join('uploads', filename)
+        file.save(filepath)
+
+        # Initialize the prediction pipeline with the saved image file
+        clApp.classifier = PredictionPipeline(filepath)
+
+        # Perform prediction
+        result = clApp.classifier.predict()
+
+        return jsonify(result)
 
 if __name__ == "__main__":
-    clApp = ClientApp()
+    # Ensure the 'uploads' directory exists
+    if not os.path.exists('uploads'):
+        os.makedirs('uploads')
+
     app.run(host='0.0.0.0', port=8080)

@@ -2468,3 +2468,228 @@ x==========x]
 [2024-08-31 15:40:08,393: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
 [2024-08-31 15:40:08,394: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
 [2024-08-31 15:40:08,453: INFO: common: created directory at: artifacts\training]
+[2024-09-01 17:45:34,933: INFO: stage_03_training: *******************]
+[2024-09-01 17:45:34,934: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-09-01 17:45:34,949: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-01 17:45:34,951: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-01 17:45:34,953: INFO: common: created directory at: artifacts]
+[2024-09-01 17:45:34,962: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-01 17:45:34,964: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-01 17:45:34,967: INFO: common: created directory at: artifacts]
+[2024-09-01 17:45:34,968: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-09-01 17:45:35,310: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-09-01 17:45:35,313: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-09-01 17:45:35,381: INFO: common: created directory at: artifacts\training]
+[2024-09-01 20:30:34,859: INFO: stage_03_training: *******************]
+[2024-09-01 20:30:34,860: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-09-01 20:30:34,864: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-01 20:30:34,866: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-01 20:30:34,867: INFO: common: created directory at: artifacts]
+[2024-09-01 20:30:34,871: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-01 20:30:34,873: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-01 20:30:34,875: INFO: common: created directory at: artifacts]
+[2024-09-01 20:30:34,875: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-09-01 20:30:35,213: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-09-01 20:30:35,213: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-09-01 20:30:35,260: INFO: common: created directory at: artifacts\training]
+[2024-09-02 07:08:43,817: INFO: stage_03_training: *******************]
+[2024-09-02 07:08:43,818: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-09-02 07:08:43,822: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-02 07:08:43,824: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-02 07:08:43,824: INFO: common: created directory at: artifacts]
+[2024-09-02 07:08:43,829: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-02 07:08:43,831: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-02 07:08:43,832: INFO: common: created directory at: artifacts]
+[2024-09-02 07:08:43,833: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-09-02 07:08:44,119: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-09-02 07:08:44,120: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-09-02 07:08:44,176: INFO: common: created directory at: artifacts\training]
+[2024-09-02 10:30:02,185: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:30:02,186: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:30:16,296: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:30:16] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:30:16,525: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:30:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 10:30:22,704: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:30:22] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:36:21,352: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:36:21] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:36:27,540: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:36:27] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:37:33,177: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:37:33,178: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:37:54,760: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:37:54] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:37:54,865: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:37:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 10:37:59,387: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:37:59] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:41:36,552: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:41:36,553: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:41:45,077: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:41:45] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:41:51,317: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:41:51] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:49:33,833: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:49:33,835: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:49:36,719: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:49:36] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:49:43,029: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:49:43] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:50:34,906: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:50:34,906: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:50:43,020: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:50:43] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:50:43,238: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:50:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 10:50:49,524: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 10:50:49] "[31m[1mPOST / HTTP/1.1[0m" 405 -]
+[2024-09-02 10:51:55,815: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 10:51:55,816: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 10:52:04,223: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:52:04] "GET / HTTP/1.1" 200 -]
+[2024-09-02 10:52:04,450: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:52:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 10:52:09,913: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\src\Ship_Classifier\pipeline\predict.py", line 41, in predict
+    img_tensor = img_tensor.to(self.device)
+                               ^^^^^^^^^^^
+AttributeError: 'PredictionPipeline' object has no attribute 'device'
+[2024-09-02 10:52:09,938: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:52:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 10:52:16,348: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\src\Ship_Classifier\pipeline\predict.py", line 41, in predict
+    img_tensor = img_tensor.to(self.device)
+                               ^^^^^^^^^^^
+AttributeError: 'PredictionPipeline' object has no attribute 'device'
+[2024-09-02 10:52:16,353: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:52:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 10:52:18,203: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\Anaconda\envs\SHIP\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sasu4\SHIP_Classification_using_Resnet\src\Ship_Classifier\pipeline\predict.py", line 41, in predict
+    img_tensor = img_tensor.to(self.device)
+                               ^^^^^^^^^^^
+AttributeError: 'PredictionPipeline' object has no attribute 'device'
+[2024-09-02 10:52:18,208: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 10:52:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-09-02 11:14:29,993: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:14:29,995: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:14:35,559: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:14:35] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:14:49,123: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:14:49] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:09,836: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:22:09,838: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:22:17,193: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:17] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:22:26,203: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:26] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:34,787: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:34] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:36,503: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:36] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:40,471: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:40] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:40,962: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:40] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:22:41,192: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:22:41] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:27:43,885: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:27:43,887: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:27:46,276: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:27:46] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:27:46,450: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:27:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 11:27:51,696: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:27:51] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:37:30,270: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:37:30,271: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:37:34,903: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:37:34] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:37:41,314: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:37:41] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:48:34,903: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:48:34,905: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:48:47,407: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:48:47] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:48:57,509: INFO: _internal: 127.0.0.1 - - [02/Sep/2024 11:48:57] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:53:52,082: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:53:52,083: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:53:57,499: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:53:57] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:54:04,334: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:54:04] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:56:13,225: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:56:13] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:56:19,119: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:56:19] "POST /predict HTTP/1.1" 200 -]
+[2024-09-02 11:56:33,489: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.9:8080]
+[2024-09-02 11:56:33,491: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-02 11:56:37,895: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:56:37] "GET / HTTP/1.1" 200 -]
+[2024-09-02 11:56:38,255: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:56:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-02 11:56:45,224: INFO: _internal: 192.168.1.9 - - [02/Sep/2024 11:56:45] "POST /predict HTTP/1.1" 200 -]
